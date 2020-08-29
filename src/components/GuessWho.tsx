@@ -155,6 +155,8 @@ const MOCK_DATA: GuessWhoContextType = {
       name: 'Katrina',
     },
   ],
+  submittedRounds: [],
+  eliminatedIndices: [],
 };
 
 const GuessWho: React.FC<GuessWhoProps> = () => {
