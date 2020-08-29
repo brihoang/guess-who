@@ -18,14 +18,15 @@ const GuessWhoTile: React.SFC<GuessWhoTileProps> = ({
   const styles = useStyles();
   const dispatch = useContext(guessWhoDispatch);
   return (
-    <div
-      onClick={() => {
-        dispatch({ type: 'TOGGLE_TILE', index });
-      }}
-    >
-      <Grid container item direction="column" alignItems="center" xs={3}>
-        <>{name}</>
-        <Card variant="outlined">
+    <Grid container item direction="column" alignItems="center" xs={4} md={2}>
+      <>{name}</>
+      <div
+        onClick={() => {
+          dispatch({ type: 'TOGGLE_TILE', index });
+        }}
+        style={{ width: '100%' }}
+      >
+        <Card variant="elevation" style={{ backgroundColor: 'red' }}>
           <div
             style={{
               background: `url(${imageURL})`,
@@ -35,8 +36,8 @@ const GuessWhoTile: React.SFC<GuessWhoTileProps> = ({
             className={styles.tileImage}
           ></div>
         </Card>
-      </Grid>
-    </div>
+      </div>
+    </Grid>
   );
 };
 

@@ -6,11 +6,8 @@ export const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     borderRadius: '4px',
-    width: 150,
-    height: 150,
+    height: 130,
+    width: '100%',
     cursor: 'pointer',
-    [theme.breakpoints.down('xs')]: {
-      height: '5rem',
-    },
   },
 }));

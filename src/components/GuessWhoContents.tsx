@@ -8,7 +8,7 @@ export interface GuessWhoContentsProps {}
 const GuessWhoContents: React.FC<GuessWhoContentsProps> = () => {
   const { tiles } = useContext(guessWhoState);
   return (
-    <Grid container spacing={0} direction="row">
+    <Grid container spacing={2} direction="row">
       {tiles.map((tile, index) => (
         <GuessWhoTile {...tile} index={index} key={index} />
       ))}
